@@ -2,7 +2,7 @@ import React from "react";
 import { useGlobalContext } from "./context";
 import { Link } from "react-router-dom";
 import SingleMovie from "./SingleMovie";
-const url =
+export const url =
   "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png";
 
 const Movies = () => {
@@ -17,7 +17,7 @@ const Movies = () => {
         return (
           <Link to={`/movies/${id}`} key={id} className="movie">
             <article>
-              <img src={poster === "NA" ? url : poster} alt={title} />
+              <img src={poster === "N/A" ? url : poster} alt={title} />
               <div className="movie-info">
                 <h4 className="title">{title}</h4>
                 <p>{year}</p>
